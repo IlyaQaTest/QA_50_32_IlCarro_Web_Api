@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/QA_50_32_IlCarro_Web_Api" />
+        <option name="gradleJvm" value="17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/QA_50_32_IlCarro_Web_Api" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/QA_50_32_PhoneBook_Web_Api" />
+        <option name="gradleJvm" value="17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/QA_50_32_PhoneBook_Web_Api" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/QA_50_32_Start" />
+        <option name="gradleJvm" value="17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/QA_50_32_Start" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
