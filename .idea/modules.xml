@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AutoProjects.iml" filepath="$PROJECT_DIR$/.idea/AutoProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/QA_50_32_IlCarro_Web_Api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/QA_50_32_IlCarro_Web_Api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/QA_50_32_IlCarro_Web_Api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/QA_50_32_IlCarro_Web_Api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/QA_50_32_PhoneBook_Web_Api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/QA_50_32_PhoneBook_Web_Api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/QA_50_32_PhoneBook_Web_Api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/QA_50_32_PhoneBook_Web_Api.test.iml" />
     </modules>
   </component>
 </project>
