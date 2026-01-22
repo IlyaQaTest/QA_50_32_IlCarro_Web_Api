@@ -26,13 +26,14 @@ public class LoginPage extends BasePage {
     public void typeLoginForm(User user){
         inputEmail.sendKeys(user.getEmail());
         inputPassword.sendKeys(user.getPassword());
+
     }
 
     public void clickBtnYalla(){
         btnYalla.click();
     }
 
-    public boolean isLoggedInDisplayed(){
+    public boolean isLoggedInDisplayed() {
         return isElementDisplayed(popUpSuccessfulLogin);
     }
 }

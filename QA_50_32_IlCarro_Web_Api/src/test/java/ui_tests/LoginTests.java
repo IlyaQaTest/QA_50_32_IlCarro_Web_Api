@@ -5,11 +5,12 @@ import manager.AppManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import pages.RegistrationPage;
 import pages.SearchPage;
 
 public class LoginTests extends AppManager {
     @Test
-    public void loginPositiveTest(){
+    public void loginPositiveTest() {
         User user = User.builder()
                 .email("testmail@gmail.ru").password("Test#000").build();
         SearchPage searchPage = new SearchPage(getDriver());
@@ -20,4 +21,5 @@ public class LoginTests extends AppManager {
         Assert.assertTrue(loginPage.isLoggedInDisplayed());
 
     }
+
 }
