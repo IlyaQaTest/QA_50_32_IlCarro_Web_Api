@@ -13,12 +13,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class RegistrationPage extends BasePage{
+public class RegistrationPage extends BasePage {
     public RegistrationPage(WebDriver driver) {
         setDriver(driver);
         PageFactory.initElements(new AjaxElementLocatorFactory
                 (driver, 10), this);
     }
+
     @FindBy(xpath = "//input[@id='name']")
     WebElement inputName;
     @FindBy(xpath = "//input[@id='lastName']")
@@ -36,7 +37,7 @@ public class RegistrationPage extends BasePage{
     @FindBy(xpath = "//button[@class='positive-button ng-star-inserted']")
     WebElement btnPUpOk;// название кнопки получилось веселое
 
-    public void RegistrationForm(User user){
+    public void RegistrationForm(User user) {
         inputName.sendKeys(user.getFirstname());
         lastName.sendKeys(user.getLastname());
         inputEmail.sendKeys(user.getEmail());
@@ -46,21 +47,23 @@ public class RegistrationPage extends BasePage{
     public void clickCheckBox() {
         // 1. Ждем, пока чекбокс появится в DOM (но он может быть невидимым)
         new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='terms-of-use']")));
-
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath
+                        ("//input[@id='terms-of-use']")));
         // 2. Кликаем через JavaScript, так как стандартный click() часто не срабатывает
         // на элементах типа checkbox из-за перекрытия другими слоями
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", checkBox);
     }
 
-    public void clickBtnYalla(){
+    public void clickBtnYalla() {
         btnYalla.click();
     }
-    public boolean isLoggedInDisplayed(){
+
+    public boolean isLoggedInDisplayed() {
         return isElementDisplayed(popUpSuccessfulLogin);
     }
-    public void clickBtnPopUpOk(){
+
+    public void clickBtnPopUpOk() {
         btnPUpOk.click();
     }
 
