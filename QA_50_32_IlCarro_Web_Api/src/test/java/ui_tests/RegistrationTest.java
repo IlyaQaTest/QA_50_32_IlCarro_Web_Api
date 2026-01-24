@@ -1,24 +1,48 @@
 package ui_tests;
 
 import dto.User;
-import manager.AppManager;
+import manager.ApplicationManager;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.RegistrationPage;
 import pages.SearchPage;
 
-public class RegistrationTest extends AppManager {
+import java.util.Random;
+
+public class RegistrationTest extends ApplicationManager {
+
+    // Выносим переменные на уровень класса, чтобы они были доступны во всех методах
+    RegistrationPage registrationPage;
+    SearchPage searchPage;
+
+    @BeforeMethod
+    public void setupSteps() {
+        searchPage = new SearchPage(getDriver());
+        registrationPage = new RegistrationPage(getDriver());
+
+        // Логика перехода: кликаем SignUp перед каждым тестом регистрации
+        searchPage.clickBtnSingUp();
+    }
+
     @Test
     public void registrationPositiveTest() {
-        User user = User.builder().firstname("Ilya").lastname("Lapidus").email("1test123test@gmail.com")
-                .password("Password123!").build();
-        SearchPage searchPage = new SearchPage(getDriver());
-        searchPage.clickBtnSingUp();
-        RegistrationPage registrationPage = new RegistrationPage(getDriver());
-        registrationPage.RegistrationForm(user);
-        registrationPage.clickCheckBox();
+        int i = new Random().nextInt(10000);
+        User user = User.builder()
+                .firstname("Ilya")
+                .lastname("Lapidus")
+                .email("test_" + i + "@gmail.com") // Уникальный email
+                .password("Password123!")
+                .build();
+
+        registrationPage.fillRegistrationForm(user); // Используем наш метод из POM
+        //registrationPage.clickCheckBoxWithActions();
+        registrationPage.setCheckBoxAgree(true);
+        //registrationPage.clickCheckBoxJS();        // Используем надежный клик через JS
         registrationPage.clickBtnYalla();
-        Assert.assertTrue(registrationPage.isLoggedInDisplayed());
+
+        Assert.assertTrue(registrationPage.isLoggedInDisplayed(), "Сообщение об успехе не отобразилось!");
+
         registrationPage.clickBtnPopUpOk();
     }
 }

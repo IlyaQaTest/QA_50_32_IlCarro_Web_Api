@@ -5,54 +5,72 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.swing.*;
 import java.time.Duration;
 
 public class RegistrationPage extends BasePage {
+
     public RegistrationPage(WebDriver driver) {
         setDriver(driver);
-        PageFactory.initElements(new AjaxElementLocatorFactory
-                (driver, 10), this);
+        // AjaxElementLocatorFactory будет ждать появления элементов до 10 секунд
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
-    @FindBy(xpath = "//input[@id='name']")
+    @FindBy(id = "name")
     WebElement inputName;
-    @FindBy(xpath = "//input[@id='lastName']")
+
+    @FindBy(id = "lastName")
     WebElement lastName;
-    @FindBy(xpath = "//input[@id='email']")
+
+    @FindBy(id = "email")
     WebElement inputEmail;
-    @FindBy(xpath = "//input[@id='password']")
+
+    @FindBy(id = "password")
     WebElement inputPassword;
-    @FindBy(xpath = "//input[@id='terms-of-use']")
-    WebElement checkBox;
+
+    // Сам чекбокс (скрытый input)
+    @FindBy(id = "terms-of-use")
+    WebElement checkBoxInput;
+
+    // Метка чекбокса (видимый элемент)
+    @FindBy(xpath = "//label[@for='terms-of-use']")
+    WebElement checkBoxLabel;
+
     @FindBy(xpath = "//button[@type='submit']")
     WebElement btnYalla;
-    @FindBy(xpath = "//h2[contains(text(),'You are logged in success')]") // Замените текст на тот, что на сайте
-    WebElement popUpSuccessfulLogin;
-    @FindBy(xpath = "//button[@class='positive-button ng-star-inserted']")
-    WebElement btnPUpOk;// название кнопки получилось веселое
 
-    public void RegistrationForm(User user) {
+    @FindBy(xpath = "//h2[contains(text(),'success')]")
+    WebElement popUpSuccessfulLogin;
+
+    @FindBy(xpath = "//button[@class='positive-button ng-star-inserted']")
+    WebElement btnPUpOk;
+
+    @FindBy(xpath = "//label[@for='terms-of-use']")
+    WebElement checkBoxAgree;
+
+    public void fillRegistrationForm(User user) {
         inputName.sendKeys(user.getFirstname());
         lastName.sendKeys(user.getLastname());
         inputEmail.sendKeys(user.getEmail());
         inputPassword.sendKeys(user.getPassword());
     }
 
+    // Рекомендуемый способ: клик по Label (имитирует поведение пользователя)
     public void clickCheckBox() {
-        // 1. Ждем, пока чекбокс появится в DOM (но он может быть невидимым)
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath
-                        ("//input[@id='terms-of-use']")));
-        // 2. Кликаем через JavaScript, так как стандартный click() часто не срабатывает
-        // на элементах типа checkbox из-за перекрытия другими слоями
+        checkBoxLabel.click();
+    }
+
+    // Резервный способ через JS: если Label перекрыт другими элементами
+    public void clickCheckBoxJS() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", checkBox);
+        js.executeScript("arguments[0].click();", checkBoxInput);
     }
 
     public void clickBtnYalla() {
@@ -60,11 +78,25 @@ public class RegistrationPage extends BasePage {
     }
 
     public boolean isLoggedInDisplayed() {
+        // Метод isElementDisplayed должен быть в BasePage
         return isElementDisplayed(popUpSuccessfulLogin);
     }
 
     public void clickBtnPopUpOk() {
         btnPUpOk.click();
     }
+    public void setCheckBoxAgree(boolean value) {
+        if (checkBoxAgree.isSelected() != value)
+            ((JavascriptExecutor) driver)
+                    .executeScript("arguments[0].click();",
+                            checkBoxAgree);
+    }
+    public void clickCheckBoxWithActions() {
+        int y = checkBoxAgree.getSize().getHeight();
+        int x = checkBoxAgree.getSize().getWidth();
+        System.out.println(x + "x" + y);
 
+        Actions actions = new Actions(driver);
+        actions.moveToElement(checkBoxAgree,1,1).click().perform();
+    }
 }

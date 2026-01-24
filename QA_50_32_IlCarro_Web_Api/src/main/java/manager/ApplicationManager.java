@@ -5,9 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import java.time.Duration;
-
-public class AppManager {
+public class ApplicationManager {
     private WebDriver driver;
     public WebDriver getDriver(){
         return driver;

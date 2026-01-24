@@ -1,14 +1,13 @@
 package ui_tests;
 
 import dto.User;
-import manager.AppManager;
+import manager.ApplicationManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.RegistrationPage;
 import pages.SearchPage;
 
-public class LoginTests extends AppManager {
+public class LoginTests extends ApplicationManager {
     @Test
     public void loginPositiveTest() {
         User user = User.builder()
