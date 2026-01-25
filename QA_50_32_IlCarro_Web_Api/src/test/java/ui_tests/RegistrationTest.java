@@ -45,7 +45,7 @@ public class RegistrationTest extends ApplicationManager {
     }
 
     @Test
-    public void registerAndThenLogin() {
+    public void registerPositiveTest() {
         User user = User.builder()
                 .firstname("first")
                 .lastname("last")
