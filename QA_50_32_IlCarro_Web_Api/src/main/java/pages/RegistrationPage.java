@@ -46,7 +46,7 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//button[@type='submit']")
     WebElement btnYalla;
 
-    @FindBy(xpath = "//h2[contains(text(),'success')]")
+    @FindBy(xpath = "//h2[@class='message']")
     WebElement popUpSuccessfulLogin;
 
     @FindBy(xpath = "//button[@class='positive-button ng-star-inserted']")
@@ -66,7 +66,6 @@ public class RegistrationPage extends BasePage {
     public void clickCheckBox() {
         checkBoxLabel.click();
     }
-
     // Резервный способ через JS: если Label перекрыт другими элементами
     public void clickCheckBoxJS() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -91,12 +90,20 @@ public class RegistrationPage extends BasePage {
                     .executeScript("arguments[0].click();",
                             checkBoxAgree);
     }
-    public void clickCheckBoxWithActions() {
-        int y = checkBoxAgree.getSize().getHeight();
-        int x = checkBoxAgree.getSize().getWidth();
-        System.out.println(x + "x" + y);
-
+    public void fillRegistrationFormWithActions(User user){
+        Actions actions = new  Actions(driver);
+        actions.sendKeys(inputName, user.getFirstname()).perform();
+        actions.sendKeys(lastName, user.getLastname()).perform();
+        actions.sendKeys(inputEmail, user.getEmail()).perform();
+        actions.sendKeys(inputPassword, user.getPassword()).perform();
+    }
+    public void clickCheckBoxWithActions(){
         Actions actions = new Actions(driver);
         actions.moveToElement(checkBoxAgree,1,1).click().perform();
     }
+    public void submitFormWithActions(){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(btnYalla).click().perform();
+    }
+
 }

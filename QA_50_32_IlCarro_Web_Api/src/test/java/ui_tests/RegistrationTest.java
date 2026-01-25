@@ -52,9 +52,10 @@ public class RegistrationTest extends ApplicationManager {
                 .email("test" + new Random().nextInt(1000) + "@mail.com")
                 .password("Password777$")
                 .build();
-        registrationPage.fillRegistrationForm(user);
-        registrationPage.setCheckBoxAgree(true);
-        registrationPage.clickBtnYalla();
+        searchPage.clickBtnSingUp();
+        registrationPage.fillRegistrationFormWithActions(user);
+        registrationPage.clickCheckBoxWithActions();
+        registrationPage.submitFormWithActions();
         Assert.assertTrue(registrationPage.isLoggedInDisplayed());
         registrationPage.clickBtnPopUpOk();
         searchPage.clickBtnLogout();
