@@ -19,6 +19,8 @@ public class SearchPage extends BasePage {
     WebElement btnLogin;
     @FindBy(xpath = "//a[text()=' Sign up ']")
     WebElement btnSingUp;
+    @FindBy(xpath = "//a[text()=' Logout ']")
+    WebElement btnLogout;
 
     public void clickBtnLogin() {
         btnLogin.click();
@@ -26,6 +28,9 @@ public class SearchPage extends BasePage {
 
     public void clickBtnSingUp() {
         btnSingUp.click();
+    }
+    public void clickBtnLogout(){
+        btnLogout.click();
     }
 
 }
