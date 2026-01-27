@@ -6,10 +6,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import pages.PopUpPage;
 import pages.RegistrationPage;
 import pages.SearchPage;
-
+import static utils.UserFactory.*;
 import java.util.Random;
+
 
 public class RegistrationTest extends ApplicationManager {
     User registredUser;
@@ -40,8 +42,9 @@ public class RegistrationTest extends ApplicationManager {
         registrationPage.setCheckBoxAgree(true);
         //registrationPage.clickCheckBoxJS();        // Используем надежный клик через JS
         registrationPage.clickBtnYalla();
-        Assert.assertTrue(registrationPage.isLoggedInDisplayed(), "Сообщение об успехе не отобразилось!");
-        registrationPage.clickBtnPopUpOk();
+        Assert.assertTrue(new PopUpPage(getDriver()).isTextInPopUpMessagePresent("You are logged in success"));
+        //Assert.assertTrue(registrationPage.isLoggedInDisplayed(), "Сообщение об успехе не отобразилось!");
+        //registrationPage.clickBtnPopUpOk();
     }
 
     @Test
@@ -61,4 +64,14 @@ public class RegistrationTest extends ApplicationManager {
         searchPage.clickBtnLogout();
     }
 
+    @Test
+    public void registrationPositiveTest_WithFaker() {
+        User user = positiveUser();
+        registrationPage.fillRegistrationForm(user);
+        registrationPage.setCheckBoxAgree(true);
+        registrationPage.clickBtnYalla();
+        Assert.assertTrue(new PopUpPage(getDriver()).isTextInPopUpMessagePresent("You are logged in success"));
+
+
+    }
 }
