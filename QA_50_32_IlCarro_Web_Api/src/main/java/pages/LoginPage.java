@@ -23,13 +23,13 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//h2[text()='Logged in success']")
     WebElement popUpSuccessfulLogin;
 
-    public void typeLoginForm(User user){
+    public void typeLoginForm(User user) {
         inputEmail.sendKeys(user.getEmail());
         inputPassword.sendKeys(user.getPassword());
 
     }
 
-    public void clickBtnYalla(){
+    public void clickBtnYalla() {
         btnYalla.click();
     }
 

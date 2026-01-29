@@ -15,8 +15,8 @@ public class PopUpPage extends BasePage {
     @FindBy(xpath = "//mat-dialog-container//h2")
     WebElement message;
 
-    public boolean isTextInPopUpMessagePresent(String text){
-        return isTextInElementPresentWait(message,text);
+    public boolean isTextInPopUpMessagePresent(String text) {
+        return isTextInElementPresentWait(message, text);
     }
 
 

@@ -29,8 +29,5 @@ public class SearchPage extends BasePage {
     public void clickBtnSingUp() {
         btnSingUp.click();
     }
-    public void clickBtnLogout(){
-        btnLogout.click();
-    }
 
 }

@@ -5,7 +5,8 @@ import net.datafaker.Faker;
 
 public class UserFactory {
     static Faker faker = new Faker();
-    public static User positiveUser(){
+
+    public static User positiveUser() {
         User user = User.builder()
                 .firstname(faker.name().firstName())
                 .lastname(faker.name().lastName())

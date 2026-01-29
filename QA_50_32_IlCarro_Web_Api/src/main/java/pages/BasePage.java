@@ -19,10 +19,10 @@ public abstract class BasePage {
     @FindBy(xpath = "//div[@class='error']")
     List<WebElement> listErrors;
 
-    public boolean isTextInError(String text){
-        if(listErrors == null || listErrors.isEmpty())
+    public boolean isTextInError(String text) {
+        if (listErrors == null || listErrors.isEmpty())
             return false;
-        for (WebElement element: listErrors){
+        for (WebElement element : listErrors) {
             if (element.getText().contains(text))
                 return true;
         }
