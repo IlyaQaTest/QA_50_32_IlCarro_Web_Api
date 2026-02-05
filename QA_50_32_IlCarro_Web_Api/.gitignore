@@ -16,7 +16,7 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-QA_50_32_IlCarro_Web_Api/src/test/properties
+
 
 ### Eclipse ###
 .apt_generated

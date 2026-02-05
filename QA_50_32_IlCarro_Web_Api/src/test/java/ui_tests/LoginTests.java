@@ -30,8 +30,8 @@ public class LoginTests extends ApplicationManager {
     @Test
     public void loginPositiveTest_WithPopUpPage() {
         User user = User.builder()
-                .email("sima_simonova370@gmail.com")
-                .password("BSas124!")
+                .email("family@mail.ru")
+                .password("Family123!")
                 .build();
         SearchPage homePage = new SearchPage(getDriver());
         homePage.clickBtnLogin();
@@ -45,8 +45,8 @@ public class LoginTests extends ApplicationManager {
     @Test
     public void loginNegativeTest_WrongPassword_WOSpecSymbol() {
         User user = User.builder()
-                .email("sima_simonova370@gmail.com")
-                .password("BSas1243")
+                .email("family@mail.ru")
+                .password("Family123")
                 .build();
         SearchPage homePage = new SearchPage(getDriver());
         homePage.clickBtnLogin();
@@ -60,8 +60,8 @@ public class LoginTests extends ApplicationManager {
     @Test
     public void loginNegativeTest_WrongEmail_Empty() {
         User user = User.builder()
-                .email("sima_simonova370gmail.com")
-                .password("")
+                .email("")
+                .password("Family123!")
                 .build();
         SearchPage homePage = new SearchPage(getDriver());
         homePage.clickBtnLogin();
