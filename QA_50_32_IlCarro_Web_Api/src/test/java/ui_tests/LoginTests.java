@@ -16,8 +16,8 @@ public class LoginTests extends ApplicationManager {
     @Test
     public void loginPositiveTest() {
         User user = User.builder()
-                .email("sima_simonova370@gmail.com")
-                .password("BSas124!")
+                .email("family@mail.ru")
+                .password("Family123!")
                 .build();
         SearchPage homePage = new SearchPage(getDriver());
         homePage.clickBtnLogin();

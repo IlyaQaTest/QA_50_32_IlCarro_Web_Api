@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04d5a98d-ae6d-4440-873a-c43c972a1bb8" name="Changes" comment="Registration positive test">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="04d5a98d-ae6d-4440-873a-c43c972a1bb8" name="Changes" comment="LoginTests neg positive test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/PropertiesReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +93,7 @@
       <recent name="C:\AutoProjects\QA_50_32_IlCarro_Web_Api\src\test\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationTest.registrationPositiveTest_WithFaker">
+  <component name="RunManager" selected="Gradle.LoginTests.loginPositiveTest">
     <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -216,8 +216,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RegistrationTest.registrationPositiveTest_WithFaker" />
         <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
+        <item itemvalue="Gradle.RegistrationTest.registrationPositiveTest_WithFaker" />
         <item itemvalue="Gradle.RegistrationTest.registerPositiveTest" />
         <item itemvalue="Gradle.RegistrationTest.registerAndThenLogin" />
         <item itemvalue="Gradle.RegistrationTest" />
@@ -288,7 +288,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770259272600</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="LoginTests neg positive test">
+      <option name="closed" value="true" />
+      <created>1770259997836</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770259997836</updated>
+    </task>
+    <task id="LOCAL-00009" summary="LoginTests neg positive test">
+      <option name="closed" value="true" />
+      <created>1770260214193</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1770260214193</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -296,6 +312,7 @@
     <MESSAGE value="Login Positive Test plus lombok" />
     <MESSAGE value="Registration test" />
     <MESSAGE value="Registration positive test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration positive test" />
+    <MESSAGE value="LoginTests neg positive test" />
+    <option name="LAST_COMMIT_MESSAGE" value="LoginTests neg positive test" />
   </component>
 </project>
