@@ -9,7 +9,7 @@ import static utils.PropertiesReader.*;
 
 public class SearchPage extends BasePage {
     public SearchPage(WebDriver driver) {
-        setDriver(driver);
+        super(driver);
         //driver.get("https://ilcarro.web.app/search");
         driver.get(getProperty("base.properties","baseUrl"));
         PageFactory.initElements(new AjaxElementLocatorFactory

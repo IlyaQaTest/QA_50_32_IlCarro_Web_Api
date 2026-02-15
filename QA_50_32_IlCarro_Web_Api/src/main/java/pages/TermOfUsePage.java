@@ -6,7 +6,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 public class TermOfUsePage extends BasePage{
     public TermOfUsePage(WebDriver driver) {
-        setDriver(driver);
+        super(driver);
         PageFactory.initElements(new AjaxElementLocatorFactory
                 (driver, 10), this);
     }

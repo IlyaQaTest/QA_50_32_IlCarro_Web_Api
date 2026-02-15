@@ -6,7 +6,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 public class LetTheCarWorkPage extends BasePage {
     public LetTheCarWorkPage(WebDriver driver) {
-        setDriver(driver);
+        super(driver);
         PageFactory.initElements(new AjaxElementLocatorFactory
                 (driver, 10), this);
     }

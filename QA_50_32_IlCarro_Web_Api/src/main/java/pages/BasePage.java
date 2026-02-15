@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.enums.HeaderMenuItem;
@@ -12,7 +13,15 @@ import java.time.Duration;
 import java.util.List;
 
 public abstract class BasePage {
-    static WebDriver driver;
+    protected static WebDriver driver;
+    protected WebDriverWait wait;
+
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        // Обязательно для работы @FindBy
+        PageFactory.initElements(driver, this);
+    }
 
     public static void setDriver(WebDriver wd) {
         driver = wd;

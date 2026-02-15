@@ -11,13 +11,15 @@ import pages.PopUpPage;
 import pages.SearchPage;
 import utils.RetryAnalyser;
 
+import java.lang.reflect.Method;
+
 import static utils.PropertiesReader.*;
 
 public class LoginTests extends ApplicationManager {
     SoftAssert softAssert = new SoftAssert();
 
     @Test
-    public void loginPositiveTest() {
+    public void loginPositiveTest(Method method) {
 //        User user = User.builder()
 //                .email("family@mail.ru")
 //                .password("Family123!")
@@ -26,6 +28,8 @@ public class LoginTests extends ApplicationManager {
                 .email(getProperty("base.properties","login")).
                 password(getProperty("base.properties","password")).
                 build();
+
+        logger.info("Start test" + method.getName() + " with user " + user);
 
         SearchPage homePage = new SearchPage(getDriver());
         homePage.clickBtnLogin();

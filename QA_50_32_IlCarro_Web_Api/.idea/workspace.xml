@@ -5,20 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04d5a98d-ae6d-4440-873a-c43c972a1bb8" name="Changes" comment="LoginTests neg positive test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/LetTheCarWorkPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/TermOfUsePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/RetryAnalyser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/enums/HeaderMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QA_50_32_Trello/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QA_50_32_Trello/src/main/java/manager/AppManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QA_50_32_Trello/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QA_50_32_Trello/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LetTheCarWorkPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LetTheCarWorkPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/PopUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PopUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/RegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PropertiesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/TermOfUsePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/TermOfUsePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QA_50_32_PhoneBook_Web_Api" beforeDir="false" afterPath="$PROJECT_DIR$/../QA_50_32_PhoneBook_Web_Api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QA_50_32_Trello/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QA_50_32_Trello/src/main/java/manager/AppManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QA_50_32_Trello/src/main/java/pages/BasePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QA_50_32_Trello/src/main/java/pages/HomePage.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +111,7 @@
       <recent name="C:\AutoProjects\QA_50_32_IlCarro_Web_Api\src\test\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTests.loginNegativeTest_WrongPassword_WOSpecSymbol">
+  <component name="RunManager" selected="Gradle.LoginTests.loginPositiveTest_WithPopUpPage">
     <configuration name="LoginTests.loginNegativeTest_WrongPassword_WOSpecSymbol" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -231,9 +234,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginTests.loginNegativeTest_WrongPassword_WOSpecSymbol" />
         <item itemvalue="Gradle.LoginTests.loginPositiveTest_WithPopUpPage" />
         <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
+        <item itemvalue="Gradle.LoginTests.loginNegativeTest_WrongPassword_WOSpecSymbol" />
         <item itemvalue="Gradle.RegistrationTest.registrationPositiveTest_WithFaker" />
         <item itemvalue="Gradle.RegistrationTest.registerPositiveTest" />
       </list>
@@ -327,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770261675834</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="LoginTests neg positive test">
+      <option name="closed" value="true" />
+      <created>1770973541297</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1770973541297</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
