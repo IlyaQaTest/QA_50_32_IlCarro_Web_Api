@@ -8,7 +8,6 @@ import org.testng.asserts.SoftAssert;
 import pages.SearchPage;
 import pages.LoginPage;
 import pages.PopUpPage;
-import pages.SearchPage;
 import utils.RetryAnalyser;
 
 import java.lang.reflect.Method;
@@ -80,10 +79,10 @@ public class LoginTests extends ApplicationManager {
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.typeLoginForm(user);
         loginPage.clickBtnYalla();
-        softAssert.assertTrue(loginPage.isTextInError
+        softAssert.assertTrue(loginPage.isTextInErrorPrecent
                 ("It'snot look like email"), "validate field email");
         System.out.println("wrong text!!");
-        softAssert.assertTrue(loginPage.isTextInError
+        softAssert.assertTrue(loginPage.isTextInErrorPrecent
                 ("Password is required"), "validate field password");
         System.out.println("right text!!");
         softAssert.assertAll();

@@ -6,7 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.LoginPage;
 import pages.PopUpPage;
 import pages.RegistrationPage;
 import pages.SearchPage;
@@ -93,13 +92,13 @@ public class RegistrationTest extends ApplicationManager {
         registrationPage.typeRegistrationForm(user);
         registrationPage.setCheckBoxAgreeTermsOfUse();
         registrationPage.clickBtnYalla();
-        softAssert.assertTrue(registrationPage.isTextInError("Name is required")
+        softAssert.assertTrue(registrationPage.isTextInErrorPrecent("Name is required")
                 ,"validate error message Name is required");
-        softAssert.assertTrue(registrationPage.isTextInError("Last name is required")
+        softAssert.assertTrue(registrationPage.isTextInErrorPrecent("Last name is required")
                 ,"validate error message Last Name is required");
-        softAssert.assertTrue(registrationPage.isTextInError("Email is required")
+        softAssert.assertTrue(registrationPage.isTextInErrorPrecent("Email is required")
                 ,"validate error message Email is required");
-        softAssert.assertTrue(registrationPage.isTextInError("Password is required")
+        softAssert.assertTrue(registrationPage.isTextInErrorPrecent("Password is required")
                 ,"validate error message Password is required");
         softAssert.assertAll();
 

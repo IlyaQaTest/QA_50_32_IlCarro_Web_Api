@@ -4,24 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04d5a98d-ae6d-4440-873a-c43c972a1bb8" name="Changes" comment="LoginTests neg positive test">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/logback.xml" afterDir="false" />
+    <list default="true" id="04d5a98d-ae6d-4440-873a-c43c972a1bb8" name="Changes" comment="logger">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ui_tests/SearchCarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/LetTheCarWorkPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LetTheCarWorkPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PopUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PopUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/RegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/TermOfUsePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/TermOfUsePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui_tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui_tests/RegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QA_50_32_PhoneBook_Web_Api" beforeDir="false" afterPath="$PROJECT_DIR$/../QA_50_32_PhoneBook_Web_Api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QA_50_32_Trello/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QA_50_32_Trello/src/main/java/manager/AppManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QA_50_32_Trello/src/main/java/pages/BasePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QA_50_32_Trello/src/main/java/pages/HomePage.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +31,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -84,35 +82,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.LoginTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginNegativeTest_WrongPassword_WOSpecSymbol.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginPositiveTest_WithPopUpPage.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.registrationPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTest.registerAndThenLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTest.registerPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTest.registrationPositiveTest_WithFaker.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/AutoProjects/QA_50_32_IlCarro_Web_Api&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build QA_50_32_IlCarro_Web_Api.executor": "Run",
+    "Gradle.LoginTests.executor": "Run",
+    "Gradle.LoginTests.loginNegativeTest_WrongPassword_WOSpecSymbol.executor": "Run",
+    "Gradle.LoginTests.loginPositiveTest.executor": "Run",
+    "Gradle.LoginTests.loginPositiveTest_WithPopUpPage.executor": "Run",
+    "Gradle.LoginTests.registrationPositiveTest.executor": "Run",
+    "Gradle.RegistrationTest.executor": "Run",
+    "Gradle.RegistrationTest.registerAndThenLogin.executor": "Run",
+    "Gradle.RegistrationTest.registerPositiveTest.executor": "Run",
+    "Gradle.RegistrationTest.registrationPositiveTest_WithFaker.executor": "Run",
+    "Gradle.SearchCarTest.searchCarNegativeTest_EmptyFieldCity.executor": "Run",
+    "Gradle.SearchCarTest.searchCarNegativeTest_EmptyFieldCityError.executor": "Run",
+    "Gradle.SearchCarTest.searchCarNegativeTest_LessCarThenDay.executor": "Run",
+    "Gradle.SearchCarTest.searchCarNegativeTest_WrongEndDate.executor": "Run",
+    "Gradle.SearchCarTest.searchCarNegativeTest_WrongFirstData.executor": "Run",
+    "Gradle.SearchCarTest.searchCarNegativeTest_WrongFirstDataMonth.executor": "Run",
+    "Gradle.SearchCarTest.searchCarNegativeTest_WrongFirstDataRequired.executor": "Run",
+    "Gradle.SearchCarTest.searchCarNegativeTest_WrongMonthFirstData.executor": "Run",
+    "Gradle.SearchCarTest.searchCarPositiveTest.executor": "Run",
+    "Gradle.SearchCarTest.searchCarPositiveTestWithCalendar.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.SearchPage.typeSearchNegativeFormDayMonthYear.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/AutoProjects/QA_50_32_IlCarro_Web_Api",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\AutoProjects\QA_50_32_IlCarro_Web_Api\src\test\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTests.loginPositiveTest_WithPopUpPage">
-    <configuration name="LoginTests.loginNegativeTest_WrongPassword_WOSpecSymbol" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SearchCarTest.searchCarNegativeTest_WrongMonthFirstData">
+    <configuration name="SearchCarTest.searchCarNegativeTest_LessCarThenDay" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -125,7 +135,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.LoginTests.loginNegativeTest_WrongPassword_WOSpecSymbol&quot;" />
+            <option value="&quot;ui_tests.SearchCarTest.searchCarNegativeTest_LessCarThenDay&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -136,7 +146,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SearchCarTest.searchCarNegativeTest_WrongEndDate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -149,7 +159,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.LoginTests.loginPositiveTest&quot;" />
+            <option value="&quot;ui_tests.SearchCarTest.searchCarNegativeTest_WrongEndDate&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -160,7 +170,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.loginPositiveTest_WithPopUpPage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SearchCarTest.searchCarNegativeTest_WrongFirstDataRequired" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -173,7 +183,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.LoginTests.loginPositiveTest_WithPopUpPage&quot;" />
+            <option value="&quot;ui_tests.SearchCarTest.searchCarNegativeTest_WrongFirstDataRequired&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -184,7 +194,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTest.registerPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SearchCarTest.searchCarNegativeTest_WrongMonthFirstData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -197,7 +207,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.RegistrationTest.registerPositiveTest&quot;" />
+            <option value="&quot;ui_tests.SearchCarTest.searchCarNegativeTest_WrongMonthFirstData&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -208,37 +218,31 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTest.registrationPositiveTest_WithFaker" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ui_tests.RegistrationTest.registrationPositiveTest_WithFaker&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="SearchPage.typeSearchNegativeFormDayMonthYear" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="QA_50_32_IlCarro_Web_Api.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pages" />
+      <option name="MAIN_CLASS_NAME" value="pages.SearchPage" />
+      <option name="METHOD_NAME" value="typeSearchNegativeFormDayMonthYear" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginTests.loginPositiveTest_WithPopUpPage" />
-        <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
-        <item itemvalue="Gradle.LoginTests.loginNegativeTest_WrongPassword_WOSpecSymbol" />
-        <item itemvalue="Gradle.RegistrationTest.registrationPositiveTest_WithFaker" />
-        <item itemvalue="Gradle.RegistrationTest.registerPositiveTest" />
+        <item itemvalue="Gradle.SearchCarTest.searchCarNegativeTest_WrongMonthFirstData" />
+        <item itemvalue="TestNG.SearchPage.typeSearchNegativeFormDayMonthYear" />
+        <item itemvalue="Gradle.SearchCarTest.searchCarNegativeTest_WrongEndDate" />
+        <item itemvalue="Gradle.SearchCarTest.searchCarNegativeTest_LessCarThenDay" />
+        <item itemvalue="Gradle.SearchCarTest.searchCarNegativeTest_WrongFirstDataRequired" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770973541297</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="logger">
+      <option name="closed" value="true" />
+      <created>1771147025142</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1771147025142</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -347,6 +359,7 @@
     <MESSAGE value="Registration test" />
     <MESSAGE value="Registration positive test" />
     <MESSAGE value="LoginTests neg positive test" />
-    <option name="LAST_COMMIT_MESSAGE" value="LoginTests neg positive test" />
+    <MESSAGE value="logger" />
+    <option name="LAST_COMMIT_MESSAGE" value="logger" />
   </component>
 </project>
