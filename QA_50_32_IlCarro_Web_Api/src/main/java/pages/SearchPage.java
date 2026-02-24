@@ -93,6 +93,12 @@ public class SearchPage extends BasePage {
         //clickWait(btnYalla,3);
     }
 
+    private String createMonth(String month) {
+        StringBuilder res = new StringBuilder();
+        return res.append(month.substring(0, 1).toUpperCase())
+                .append(month.substring(1).toLowerCase()).toString();
+    }
+
     private void typeCalendar(LocalDate date) {
         btnYearCalendar.click();
         //td[@aria-label='2026']
@@ -100,12 +106,28 @@ public class SearchPage extends BasePage {
         WebElement btnYear = driver.findElement(
                 By.xpath("//td[@aria-label='" + year + "']"));
         btnYear.click();
+        //td[@aria-label="March 2026"]
+        String month = createMonth(date.getMonth().toString());
+        WebElement btnMonth = driver.findElement(
+                By.xpath("//td[@aria-label='" + month + " " + year + "']"));
+        btnMonth.click();
+        //String day = Integer.toString(date.getDayOfMonth());
+        String day = String.valueOf(date.getDayOfMonth());
+        WebElement btnDay = driver.findElement(
+                By.xpath("//td[@aria-label='" + month + " " + day + ", " + year + "']"));
+        btnDay.click();
+
+
     }
 
     public void typeSearchFormWithCalendar(String city, LocalDate startDate, LocalDate endDate) {
         inputCity.sendKeys(city);
         inputDates.click();
+        //System.out.println(startDate.getMonth());
         typeCalendar(startDate);
+        typeCalendar(endDate);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.querySelector(\"button[type='submit']\").removeAttribute(\"disabled\")");
 
 
     }
